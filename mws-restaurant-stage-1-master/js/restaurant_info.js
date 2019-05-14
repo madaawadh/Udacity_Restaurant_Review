@@ -7,7 +7,6 @@ var newMap;
 document.addEventListener('DOMContentLoaded', (event) => {  
   initMap();
 });
-console.log("image.alt");
 /**
  * Initialize leaflet map
  */
@@ -181,6 +180,9 @@ createReviewHTML = (review) => {
 fillBreadcrumb = (restaurant=self.restaurant) => {
   const breadcrumb = document.getElementById('breadcrumb');
   const li = document.createElement('li');
+  var att = document.createAttribute("aria-current");       // Create a "class" attribute
+  att.value = "page";
+  li.setAttributeNode(att); 
   li.innerHTML = restaurant.name;
   breadcrumb.appendChild(li);
 }

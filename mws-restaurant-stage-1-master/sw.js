@@ -5,7 +5,7 @@ caches.open('witter-static-v1').then(function(cache) {
   return cache.addAll(
     [ '/',
     '/index.html',
-    '/restaurant.html',
+    '/restaurant.html?id=',
     '/js/dbhelper.js',
     '/js/main.js',
     '/js/restaurant_info.js',
